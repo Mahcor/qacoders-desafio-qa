@@ -1,0 +1,144 @@
+{
+	"id": "5af53f57-0a86-4b4a-b68c-f53815f8d633",
+	"name": "Desafio-QAS",
+	"timestamp": "2022-02-03T22:27:14.651Z",
+	"collection_id": "18222035-7ff6f1c6-6713-4794-9f48-4a931303411b",
+	"folder_id": 0,
+	"environment_id": "af74c801-ee39-4a6a-911d-22c275cc1f5e",
+	"totalPass": 50,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "3ead4e3d-e34b-4851-bcfb-b48b02bb868c",
+			"name": "Cadastrar-Usuarios",
+			"time": 450,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Check FirstName is true": true,
+				"Check Email is True": true,
+				"Check Gender is True": true,
+				"Check Status is True": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Check FirstName is true": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Check Email is True": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Check Gender is True": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Check Status is True": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				1905,
+				452,
+				446,
+				456,
+				508,
+				441,
+				443,
+				446,
+				460,
+				450
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				},
+				{
+					"Status code is 201": true,
+					"Check FirstName is true": true,
+					"Check Email is True": true,
+					"Check Gender is True": true,
+					"Check Status is True": true
+				}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 6007,
+	"collection": {
+		"requests": [
+			{
+				"id": "3ead4e3d-e34b-4851-bcfb-b48b02bb868c",
+				"method": "POST"
+			}
+		]
+	}
+}
