@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "7ff6f1c6-6713-4794-9f48-4a931303411b",
+		"name": "Desafio-QAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar-Usuarios",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set (\"FistName\",pm.variables.replaceIn('{{$randomFirstName}}'));\r",
+							"\r",
+							"pm.environment.set (\"Email\",pm.variables.replaceIn('{{$randomEmail}}'));\r",
+							"\r",
+							"function Gender() {\r",
+							"    var Gender =[\"female\", \"male\"];\r",
+							"    var randomitem = Gender[Math.floor(Math.random() * Gender.length)];\r",
+							"    return randomitem;\r",
+							"}\r",
+							"pm.environment.set (\"Gender\",Gender());\r",
+							"\r",
+							"function Status() {\r",
+							"    var Status =[\"active\", \"inactive\"];\r",
+							"    var randomitem = Status[Math.floor(Math.random()* Status.length)];\r",
+							"    return randomitem;\r",
+							"}\r",
+							"pm.environment.set (\"Status\",Status());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test('Check FirstName is true', function(){\r",
+							"    pm.expect(pm.variables.get(\"FirstName\")).to.eql(JSON.parse(responseBody).Firstname)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('Check Email is True', function(){\r",
+							"    pm.expect(pm.variables.get(\"Email\")).to.eql(JSON.parse(responseBody).email)\r",
+							"});\r",
+							"\r",
+							"pm.test('Check Gender is True', function(){\r",
+							"    pm.expect(pm.variables.get(\"Gender\")).to.eql(JSON.parse(responseBody).gender)\r",
+							"});\r",
+							"\r",
+							"pm.test('Check Status is True', function(){\r",
+							"    pm.expect(pm.variables.get(\"Status\")).to.eql(JSON.parse(responseBody).status)\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{FistName}}\",\r\n    \"email\": \"{{Email}}\",\r\n    \"gender\": \"{{Gender}}\",\r\n    \"status\": \"{{Status}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v2/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "60401c185a6f32bec29e23028feebd28a653874b300c0db52e59daa57c88bf2c",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
